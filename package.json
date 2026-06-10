@@ -1,10 +1,13 @@
 {
   "name": "meimei-api",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "reset:data": "node scripts/reset-data.mjs"
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "sync:remote-redis": "node scripts/sync-remote-redis-to-local.mjs"
   },
   "dependencies": {
-    "@vercel/kv": "^1.0.0"
+    "ioredis": "^5.6.1"
   }
 }
